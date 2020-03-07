@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>New Registration</title>
+	</head>
+	<body>
+		<header>
+			<h2>Registration Form</h2>
+		</header>
+
+		<main>
+			<section>
+				<span
+					><h3>
+						Kindly fill the following fields. Fields marked with <i>*</i> are
+						mandatory
+					</h3></span
+				>
+				<form autocomplete="on">
+					<label for="register-username">Username:</label>
+					<input
+						type="text"
+						name="register-username"
+						maxlength="20"
+						autocomplete="on"
+						autofocus="on"
+						placeholder="Enter a username"
+						required
+					/>
+					<br />
+
+					<label for="register-dob">Date of birth:</label>
+					<input
+						type="date"
+						name="register-dob"
+						min="1900-01-01"
+						autocomplete="on"
+						required
+					/>
+					<br />
+
+					<label for="register-email">E-mail address:</label>
+					<input
+						type="email"
+						name="register-email"
+						placeholder="Enter E-mail"
+						maxlength="30"
+						autocomplete="on"
+						required
+					/>
+					<br />
+
+					<label for="register-phone">Phone number:</label>
+					<input
+						type="tel"
+						name="register-phone"
+						maxlength="10"
+						placeholder="Enter phone number"
+						autocomplete="on"
+						required
+					/><br />
+
+					<label for="register-password">Password:</label>
+					<input
+						type="password"
+						name="register-password"
+						maxlength="20"
+						placeholder="Enter password"
+						required
+					/>
+					<span>Password guidelines</span>
+					<br />
+
+					<label for="register-confirm-password">Confirm password:</label>
+					<input
+						type="password"
+						name="register-confirm-password"
+						maxlength="20"
+						placeholder="Enter password again"
+						required
+					/>
+					<br />
+					<button type="submit" name="register-submit">Submit Details</button>
+				</form>
+			</section>
+		</main>
+
+		<footer></footer>
+	</body>
+</html>
