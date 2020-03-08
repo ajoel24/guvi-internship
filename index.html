@@ -5,47 +5,94 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Login Page</title>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
 	</head>
 	<body>
-		<header><h2>Login Page</h2></header>
+		<header class="navbar navbar-dark bg-primary">
+			<h2 class="navbar-brand">Login Page</h2>
+		</header>
 
-		<main>
-			<section class="login-form">
+		<main class="container">
+			<section class="login-form col-sm-8">
 				<span><h3>Login Form</h3></span>
 				<form autocomplete="on">
-					<label for="login-username">Username or E-mail:</label>
-					<input
-						type="text"
-						name="login-username"
-						placeholder="Enter username or email"
-						autofocus="on"
-						maxlength="30"
-						required
-					/>
+					<div class="form-group">
+						<label for="login-username">Username or E-mail:</label>
+						<input
+							id="login-username"
+							type="text"
+							name="login-username"
+							class="form-control"
+							placeholder="Enter username or email"
+							autofocus="on"
+							maxlength="30"
+							required
+						/>
+					</div>
 					<br />
-					<label for="login-password">Password:</label>
-					<input
-						type="password"
-						name="login-password"
-						maxlength="20"
-						placeholder="Enter password"
-						autocomplete="off"
-						required
-					/><br />
-					<button type="submit" name="login-submit">Login</button> <br />
+					<div class="form-group">
+						<label for="login-password">Password:</label>
+						<input
+							id="login-password"
+							type="password"
+							name="login-password"
+							maxlength="20"
+							placeholder="Enter password"
+							class="form-control"
+							autocomplete="off"
+							required
+						/>
+						<div class="invalid-feedback">
+							Password is invalid
+						</div>
+					</div>
+					<br />
+					<button
+						type="submit"
+						id="login-submit"
+						class="btn btn-success btn-lg"
+						name="login-submit"
+					>
+						Login
+					</button>
+					<br /><br />
 				</form>
-				<section class="login-options">
-					<span class="login-forgot-pass">
+				<section class="login-options d-flex flex-row justify-content-between">
+					<p class="login-forgot-pass">
 						<a href="forgot-password.html">Forgot password?</a>
-					</span>
-					<br />
-					<span class="login-register">
+					</p>
+
+					<p class="login-register">
 						<a href="register.html">New user? Register here!</a>
-					</span>
+					</p>
 				</section>
 			</section>
 		</main>
 
 		<footer></footer>
+
+		<!-- Bootstrap -->
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<script src="lib/js/login-validate.js"></script>
 	</body>
 </html>
